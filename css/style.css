@@ -1,0 +1,387 @@
+/* 1) Variáveis e Configurações Gerais */
+:root {
+    --bg-color: #e8e3d5; /*Bege Claro*/
+    --text-color: #55371a; /*Marrom Escuro (textos e bordas)*/
+    --primary-dark: #556b2f; /*Verde Oliva Escuro*/
+    --card-bg: #e8e3d5;
+    --accent-color: #BFC9AD;
+
+    --font-serif: 'Playfair Display', Georgia, serif; /* Estilo editorial */
+    --font-sans: 'Montserrat', Arial, sans-serif; /* Alta legibilidade */
+}
+
+/* 1.1) Reset Básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+/* 1.2) Atalho de acessibilidade (Skip Link) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-dark);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0
+}
+
+/* 1.3) Container padrão */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 2) Cabeçalho e Navegação Principal */
+header[role="banner"] {
+    background-color: var(--bg-color);
+    border-bottom: 2px solid var(--primary-dark);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+}
+
+#main-nav .nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 3px;
+    transition: color 0.2s;
+}
+
+#main-nav a:hover,
+#main-nav a:focus,
+#main-nav a.active {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-dark);
+    outline: none;
+}
+/* 3) Campo Hero (estilo editorial/capa) */
+.hero-section {
+    padding: 80px 0 50px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+    color: #444;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 3.1) Botões Estilizados */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* 4) Campo dos Três Pilares */
+.pilares-section {
+    padding: 80px 0;
+}
+
+.pilares-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-color);
+    border: 1px solid #556b2f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: brightness(0.95);
+}
+
+.card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+    align-self: flex-start;
+}
+
+.card-link:hover,
+.card-link:focus {
+    border-bottom-color: var(--primary-dark);
+}
+
+/* 5) Destaques e Comunidade */
+.highlights-section {
+    background-color: var(--card-bg);
+    padding: 70px 0;
+    border-top: 1px solid #D8D2C4;
+    border-bottom: 1px solid #D8D2C4;
+}
+
+.highlights-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.highlight-item {
+    background: var(--accent-color);
+    padding: 30px;
+    border-left: 4px solid var(--primary-dark);
+}
+
+.highlight-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.link-action {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.link-action:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* 6) Acessibilidade */
+.accessibility-commitment {
+    padding: 80px 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accessibility-commitment h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.accessibility-commitment p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* 7) Rodapé */
+footer[role="contentinfo"] {
+    background-color: #241304;
+    color: var(--bg-color);
+    padding: 60px 0 30px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #b3997f;
+    margin-bottom: 15px;
+}
+
+.footer-col h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--bg-color);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #b3997f;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover,
+.footer-col ul li a:focus {
+    color: var(--bg-color);
+    text-decoration: underline;
+}
+
+/* 8) Acessibilidade de foco */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* 8.1) Foco visível ajustado para acessibilidade (Navegação por Teclado) */
+a:focus, button:focus {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
