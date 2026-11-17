@@ -5,6 +5,8 @@
     --primary-dark: #556b2f; /*Verde Oliva Escuro*/
     --card-bg: #e8e3d5;
     --accent-color: #BFC9AD;
+    --accent-color2: #e2edce;
+    --accent-color3: #d7d8c5;
 
     --font-serif: 'Playfair Display', Georgia, serif; /* Estilo editorial */
     --font-sans: 'Montserrat', Arial, sans-serif; /* Alta legibilidade */
@@ -21,6 +23,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-sans);
+    font-weight: 500; /* Montserrat 500: traço mais firme que o 400, melhora a legibilidade */
     line-height: 1.6;
 }
 
@@ -384,4 +387,608 @@ footer[role="contentinfo"] {
 a:focus, button:focus {
     outline: 3px solid var(--primary-dark);
     outline-offset: 3px;
+}
+
+/* 9) Páginas Internas: componentes compartilhados */
+/* 9.1) Abertura da página (equivalente ao hero, em tamanho menor) */
+.page-hero {
+    padding: 60px 0 40px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+/* 9.1.1) Abertura com imagem de fundo
+   A imagem fica no CSS (é decorativa, não precisa de alt).
+   Uma camada marrom escura (mesma cor do rodapé) a 60% por cima da foto deixa o
+   texto bege legível. Para a foto aparecer mais, diminua o 0.6; para o texto
+   ficar mais legível, aumente. */
+.page-hero--imagem {
+    background-color: #241304;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 0 70px 0;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.page-hero--imagem h1,
+.page-hero--imagem .hero-text {
+    color: var(--accent-color2);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero--imagem .hero-text {
+    margin-bottom: 0;
+}
+
+/* Fundo específico de cada página (o caminho é relativo a este arquivo CSS) */
+.page-hero--sobre {
+    background-image: linear-gradient(rgba(42, 41, 41, 0.4), rgba(42, 41, 41, 0.4)), url("../images/hero-sobre.jpg");
+}
+
+/* 9.2) Seções de conteúdo */
+.content-section {
+    padding: 70px 0;
+}
+
+.content-section--alt {
+    background-color: rgba(191, 201, 173, 0.4);
+    border-top: 1px solid #D8D2C4;
+    border-bottom: 1px solid #D8D2C4;
+}
+
+.content-section h2,
+.cta-section h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-dark);
+}
+
+.section-intro {
+    max-width: 750px;
+    margin: -20px auto 40px auto;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.text-block p {
+    font-size: 1.05rem;
+    max-width: 70ch;
+    margin-bottom: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 9.3) Cartões de informação */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+    border-top: 4px solid var(--primary-dark);
+    padding: 30px;
+}
+
+.info-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+}
+
+/* 9.4) Chamada para ação no fim das páginas */
+.cta-section {
+    padding: 70px 0;
+    text-align: center;
+    border-top: 1px solid #D8D2C4;
+}
+
+.cta-section p {
+    max-width: 650px;
+    margin: -20px auto 30px auto;
+    font-size: 1.05rem;
+}
+
+/* 10) Página Sobre */
+.about-story,
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.logo-figure {
+    text-align: center;
+    background-color: var(--accent-color3);
+    border: 1px solid var(--primary-dark);
+    padding: 25px;
+}
+
+.logo-figure img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+}
+
+.logo-figure figcaption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.fact-box {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--primary-dark);
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.fact-box h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.fact-box p {
+    max-width: 800px;
+    margin: 0 auto 12px auto;
+}
+
+.fact-box .source a {
+    color: var(--bg-color);
+}
+
+.fact-box .source a:focus {
+    outline-color: var(--bg-color);
+}
+
+.values-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.values-list li {
+    background-color: var(--accent-color);
+    border-left: 4px solid var(--primary-dark);
+    padding: 24px;
+}
+
+.values-list h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.values-list p {
+    font-size: 0.9rem;
+}
+
+.goals-list {
+    list-style: none;
+    counter-reset: meta;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.goals-list li {
+    counter-increment: meta;
+    position: relative;
+    padding: 18px 10px 18px 65px;
+    border-bottom: 1px solid rgba(85, 55, 26, 0.25);
+}
+
+.goals-list li::before {
+    content: counter(meta);
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-dark);
+    color: var(--bg-color);
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.inclusion-list {
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+    padding-left: 1.2em;
+    font-size: 1.05rem;
+}
+
+.inclusion-list li {
+    margin-bottom: 10px;
+}
+
+.note-ficticio {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: -20px 0 30px 0;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+    padding: 30px;
+}
+
+.testimonial h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+}
+
+.testimonial blockquote {
+    border-left: 4px solid var(--primary-dark);
+    padding-left: 18px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+}
+
+.testimonial footer p {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* 11) Página Moda Circular */
+/* 11.1) Fundo da abertura: coloque a foto em images/hero-modacircular.jpg
+   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+.page-hero--modacircular {
+    background-image: linear-gradient(rgba(42, 41, 41, 0.4), rgba(42, 41, 41, 0.4)), url("../images/hero-modacircular.jpg");
+}
+
+/* 11.2) Foto ao lado do texto */
+.photo-figure {
+    background-color: var(--accent-color3);
+    border: 1px solid var(--primary-dark);
+    padding: 12px;
+}
+
+.photo-figure img {
+    display: block;
+    width: 100%;
+    height: 340px;           /* ajuste este número até casar com a altura do texto */
+    object-fit: cover;       /* corta as bordas, sem deformar a foto */
+    object-position: center 65%; /* parte da foto que fica visível (veja abaixo) */
+}
+
+.photo-figure figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.info-card .card-link {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/* 11.3) Catálogo: compensa o cabeçalho fixo ao navegar pelo link #catalogo */
+#catalogo {
+    scroll-margin-top: 160px;
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-catalogo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+}
+
+#catalogo h2,
+#catalogo .section-intro,
+#catalogo .note-ficticio {
+    color: var(--accent-color2);
+}
+
+/* 11.4) Filtros (funcionam só com CSS, sem JavaScript) */
+.filtros {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+}
+
+.filtros h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.filtros form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px 40px;
+}
+
+.filtros fieldset {
+    border: none;
+    min-width: 0;
+}
+
+.filtros legend {
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.filtro-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtro-opcoes label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 2px solid var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filtro-opcoes label:has(input:checked) {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.filtro-opcoes input {
+    accent-color: var(--primary-dark);
+}
+
+.filtro-opcoes input:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+.filtro-opcoes label:has(input:checked) input:focus-visible {
+    outline-color: var(--bg-color);
+}
+
+button.btn {
+    font-family: var(--font-sans);
+    cursor: pointer;
+}
+
+/* Esconde as peças que não correspondem ao filtro marcado */
+main:has(#cat-vestidos:checked) .peca:not(.cat-vestidos),
+main:has(#cat-camisas:checked) .peca:not(.cat-camisas),
+main:has(#cat-calcas:checked) .peca:not(.cat-calcas),
+main:has(#cat-casacos:checked) .peca:not(.cat-casacos),
+main:has(#cat-acessorios:checked) .peca:not(.cat-acessorios),
+main:has(#of-venda:checked) .peca:not(.of-venda),
+main:has(#of-troca:checked) .peca:not(.of-troca) {
+    display: none;
+}
+
+/* 11.5) Cartões das peças */
+.pecas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.peca {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+}
+
+.peca-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.peca-categoria {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+}
+
+.peca h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+}
+
+.oferta {
+    align-self: flex-start;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.oferta--venda {
+    background-color: var(--primary-dark);
+    color: var(--bg-color);
+}
+
+.oferta--troca {
+    background-color: var(--accent-color);
+    border: 1px solid var(--primary-dark);
+    color: var(--text-color);
+}
+
+.peca-detalhes {
+    font-size: 0.9rem;
+}
+
+.peca-detalhes div {
+    margin-bottom: 4px;
+}
+
+.peca-detalhes dt,
+.peca-detalhes dd {
+    display: inline;
+}
+
+.peca-detalhes dt {
+    font-weight: 700;
+}
+
+.peca footer {
+    margin-top: auto;
+}
+
+/* 12) Página Slow Fashion */
+/* 12.1) Fundo da abertura: coloque a foto em images/hero-slowfashion.jpg
+   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+.page-hero--slowfashion {
+    background-image: linear-gradient(rgba(42, 41, 41, 0.6), rgba(42, 41, 41, 0.6)), url("../images/hero-slowfashion.jpg");
+}
+
+/* 12.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links #criadores e #produtos */
+#criadores,
+#produtos {
+    scroll-margin-top: 160px;
+}
+
+/* 12.2.1) Fundo da seção de produtos: foto em images/fundo-produtos.jpg com camada escura
+   (mesmo padrão do #catalogo da Moda Circular) */
+#produtos {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-produtos.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+}
+
+#produtos h2,
+#produtos .section-intro {
+    color: var(--accent-color2);
+}
+
+@media (max-width: 768px) {
+    #produtos {
+        background-attachment: scroll;
+        background-size: auto 700px;
+        background-repeat: repeat-y;
+    }
+}
+
+/* 12.3) Cartões dos criadores */
+.criadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.criador {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+    border-top: 4px solid var(--primary-dark);
+}
+
+.criador-meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+}
+
+.criador h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+}
+
+.criador p {
+    font-size: 0.95rem;
+}
+
+.criador .criador-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* 13) Responsividade das páginas internas */
+@media (max-width: 768px) {
+    .page-hero,
+    .page-hero--imagem {
+        padding: 40px 0 30px 0;
+    }
+
+    .content-section,
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .content-section h2,
+    .cta-section h2 {
+        font-size: clamp(1.5rem, 6.5vw, 2.4rem);
+        overflow-wrap: break-word;
+    }
+
+    .fact-box {
+        padding: 22px;
+    }
+
+    .photo-figure img {
+        height: 260px;
+    }
+
+        #catalogo {
+        background-attachment: scroll;
+        background-size: auto 700px;
+        background-repeat: repeat-y;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-story,
+    .split-layout {
+        grid-template-columns: 1.5fr 1fr;
+    }
 }
