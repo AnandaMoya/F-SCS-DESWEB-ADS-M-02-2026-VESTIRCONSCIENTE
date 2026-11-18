@@ -1179,6 +1179,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 
 /* 14.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
 #colecoes,
+#ferramentas,
 #processos {
     scroll-margin-top: 160px;
 }
@@ -1214,6 +1215,12 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 
 .galeria-item--alto img {
     aspect-ratio: 2 / 3;
+}
+
+/* Imagens que aparecem inteiras, sem corte (seção de processos) */
+.galeria-item--natural img {
+    aspect-ratio: auto;
+    object-fit: contain;
 }
 
 .galeria-item--larga {
