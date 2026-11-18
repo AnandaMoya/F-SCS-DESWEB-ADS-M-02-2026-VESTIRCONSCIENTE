@@ -171,6 +171,53 @@ header[role="banner"] {
     color: var(--bg-color);
 }
 
+/* 3.2) Banner da Home com imagem de fundo
+   A foto fica em images/hero-home.jpg. Uma camada marrom escura (mesma cor do rodapé)
+   por cima da foto deixa o texto claro legível. Para a foto aparecer mais, diminua o 0.62;
+   para o texto ficar mais legível, aumente. */
+.hero-section--imagem {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.62), rgba(36, 19, 4, 0.62)), url("../images/hero-home.jpg");
+    background-size: cover;
+    background-position: center 75%; /* parte da foto que fica visível */
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.hero-section--imagem h1,
+.hero-section--imagem .hero-text {
+    color: var(--accent-color2);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões com cores claras sobre a foto escura */
+.hero-section--imagem .btn-primary {
+    background-color: var(--accent-color2);
+    border-color: var(--accent-color2);
+    color: #241304;
+}
+
+.hero-section--imagem .btn-primary:hover,
+.hero-section--imagem .btn-primary:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.hero-section--imagem .btn-secondary {
+    border-color: var(--accent-color2);
+    color: var(--accent-color2);
+}
+
+.hero-section--imagem .btn-secondary:hover,
+.hero-section--imagem .btn-secondary:focus {
+    background-color: var(--accent-color2);
+    color: #241304;
+}
+
+.hero-section--imagem a:focus {
+    outline-color: var(--accent-color2);
+}
+
 /* 4) Campo dos Três Pilares */
 .pilares-section {
     padding: 80px 0;
