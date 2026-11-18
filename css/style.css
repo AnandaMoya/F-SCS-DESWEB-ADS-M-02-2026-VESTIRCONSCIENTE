@@ -992,3 +992,156 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
         grid-template-columns: 1.5fr 1fr;
     }
 }
+
+/* 14) Página Materiais */
+/* 14.1) Fundo da abertura: coloque a foto em images/hero-materiais.jpg
+   Enquanto a foto não existir, a abertura aparece em marrom escuro, com o texto claro. */
+.page-hero--materiais {
+    background-image: linear-gradient(rgba(42, 41, 41, 0.5), rgba(42, 41, 41, 0.5)), url("../images/hero-materiais.jpg");
+}
+
+/* 14.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
+#materiais,
+#dados,
+#upcycling,
+#pecas {
+    scroll-margin-top: 160px;
+}
+
+/* 14.3) Subtítulos dentro das seções */
+.subtitulo-tabela {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 50px 0 20px 0;
+    color: var(--primary-dark);
+}
+
+/* 14.4) Tabela comparativa (rolagem lateral no celular, sem quebrar o layout) */
+.tabela-rolavel {
+    overflow-x: auto;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+}
+
+.tabela-materiais {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.tabela-materiais caption {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.tabela-materiais th,
+.tabela-materiais td {
+    padding: 12px 16px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #D8D2C4;
+}
+
+.tabela-materiais thead th {
+    background-color: var(--primary-dark);
+    color: var(--bg-color);
+    border-top: none;
+}
+
+.tabela-materiais tbody th {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.tabela-materiais tbody tr:nth-child(even) {
+    background-color: rgba(191, 201, 173, 0.4);
+}
+
+/* 14.5) Dados com fonte */
+.dados-artigo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+    border-top: 4px solid var(--primary-dark);
+}
+
+.dados-artigo h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.dado {
+    padding: 16px 0;
+    border-top: 1px solid #D8D2C4;
+}
+
+.dado dt {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    margin-bottom: 6px;
+}
+
+.dado dd {
+    font-size: 1rem;
+}
+
+.dado-numero {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary-dark);
+}
+
+.fonte a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+
+.fonte {
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #D8D2C4;
+    font-size: 0.85rem;
+}
+
+/* 14.6) Etiqueta do tipo de material nos cartões do catálogo */
+.peca-tag {
+    align-self: flex-start;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--accent-color2);
+    border: 1px solid var(--primary-dark);
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .subtitulo-tabela {
+        margin-top: 40px;
+    }
+
+    .dados-artigo {
+        padding: 22px;
+    }
+
+    .dado-numero {
+        font-size: 2rem;
+    }
+}
