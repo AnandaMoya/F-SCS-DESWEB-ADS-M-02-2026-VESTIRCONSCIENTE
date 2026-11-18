@@ -904,14 +904,6 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--accent-color2);
 }
 
-@media (max-width: 768px) {
-    #produtos {
-        background-attachment: scroll;
-        background-size: auto 700px;
-        background-repeat: repeat-y;
-    }
-}
-
 /* 12.3) Cartões dos criadores */
 .criadores-grid {
     display: grid;
@@ -953,54 +945,14 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     margin-top: auto;
 }
 
-/* 13) Responsividade das páginas internas */
-@media (max-width: 768px) {
-    .page-hero,
-    .page-hero--imagem {
-        padding: 40px 0 30px 0;
-    }
-
-    .content-section,
-    .cta-section {
-        padding: 50px 0;
-    }
-
-    .content-section h2,
-    .cta-section h2 {
-        font-size: clamp(1.5rem, 6.5vw, 2.4rem);
-        overflow-wrap: break-word;
-    }
-
-    .fact-box {
-        padding: 22px;
-    }
-
-    .photo-figure img {
-        height: 260px;
-    }
-
-        #catalogo {
-        background-attachment: scroll;
-        background-size: auto 700px;
-        background-repeat: repeat-y;
-    }
-}
-
-@media (min-width: 769px) {
-    .about-story,
-    .split-layout {
-        grid-template-columns: 1.5fr 1fr;
-    }
-}
-
-/* 14) Página Materiais */
-/* 14.1) Fundo da abertura: coloque a foto em images/hero-materiais.jpg
+/* 13) Página Materiais */
+/* 13.1) Fundo da abertura: coloque a foto em images/hero-materiais.jpg
    Enquanto a foto não existir, a abertura aparece em marrom escuro, com o texto claro. */
 .page-hero--materiais {
     background-image: linear-gradient(rgba(42, 41, 41, 0.5), rgba(42, 41, 41, 0.5)), url("../images/hero-materiais.jpg");
 }
 
-/* 14.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
+/* 13.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
 #materiais,
 #dados,
 #upcycling,
@@ -1008,7 +960,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     scroll-margin-top: 160px;
 }
 
-/* 14.3) Subtítulos dentro das seções */
+/* 13.3) Subtítulos dentro das seções */
 .subtitulo-tabela {
     font-family: var(--font-serif);
     font-size: 1.6rem;
@@ -1017,7 +969,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--primary-dark);
 }
 
-/* 14.4) Tabela comparativa (rolagem lateral no celular, sem quebrar o layout) */
+/* 13.4) Tabela comparativa (rolagem lateral no celular, sem quebrar o layout) */
 .tabela-rolavel {
     overflow-x: auto;
     background-color: var(--bg-color);
@@ -1061,7 +1013,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     background-color: rgba(191, 201, 173, 0.4);
 }
 
-/* 14.5) Dados com fonte */
+/* 13.5) Dados com fonte */
 .dados-artigo {
     max-width: 900px;
     margin: 0 auto;
@@ -1117,7 +1069,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     font-size: 0.85rem;
 }
 
-/* 14.6) Etiqueta do tipo de material nos cartões do catálogo */
+/* 13.6) Etiqueta do tipo de material nos cartões do catálogo */
 .peca-tag {
     align-self: flex-start;
     display: inline-block;
@@ -1132,7 +1084,95 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--text-color);
 }
 
+/* 13.7) Foto da introdução inteira (sem corte), usada quando a imagem tem texto */
+.photo-figure--inteira img {
+    height: 340px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* 13.8) Fundo da seção de dados: foto em images/fundo-dados.jpg com camada escura.
+   Para a foto aparecer mais, diminua o 0.6; para o texto ficar mais legível, aumente. */
+#dados {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-dados.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#dados h2,
+#dados .section-intro {
+    color: var(--accent-color2);
+}
+
+/* 13.9) Fundo do catálogo: foto em images/fundo-pecas.jpg, repetida como estampa, com camada escura */
+#pecas {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.68), rgba(36, 19, 4, 0.68)), url("../images/fundo-pecas.jpg");
+    background-size: 700px auto;
+    background-repeat: repeat;
+    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+}
+
+#pecas h2,
+#pecas .section-intro,
+#pecas .note-ficticio {
+    color: var(--accent-color2);
+}
+
+/* 14) Responsividade das páginas internas (único @media de celular do arquivo) */
 @media (max-width: 768px) {
+    .page-hero,
+    .page-hero--imagem {
+        padding: 40px 0 30px 0;
+    }
+
+    .content-section,
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .content-section h2,
+    .cta-section h2 {
+        font-size: clamp(1.5rem, 6.5vw, 2.4rem);
+        overflow-wrap: break-word;
+    }
+
+    .fact-box {
+        padding: 22px;
+    }
+
+    .photo-figure img {
+        height: 260px;
+    }
+
+    .photo-figure--inteira img {
+        height: 260px;
+    }
+
+    /* Fundos com foto: sem "fixed" no celular, para não travar nem cortar a imagem */
+    #catalogo,
+    #produtos {
+        background-attachment: scroll;
+        background-size: auto 700px;
+        background-repeat: repeat-y;
+    }
+
+    #dados {
+        background-attachment: scroll;
+        background-size: auto 700px;
+        background-repeat: repeat-y;
+    }
+
+    #pecas {
+        background-attachment: scroll;
+        background-size: 500px auto;
+    }
+
+    /* Materiais */
     .subtitulo-tabela {
         margin-top: 40px;
     }
@@ -1143,5 +1183,12 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 
     .dado-numero {
         font-size: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-story,
+    .split-layout {
+        grid-template-columns: 1.5fr 1fr;
     }
 }
