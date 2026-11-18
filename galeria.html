@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria e Processos Artesanais - Coleções, Matérias-Primas e Ferramentas | Vestir Consciente</title>
+    <meta name="description" content="Galeria com imagens das coleções de moda circular, slow fashion e materiais ecológicos, e dos fios, tecidos e ferramentas dos ateliês, com descrição detalhada e fonte de cada imagem.">
+    <!--Fontes (Google Fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--CSS Externo-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+    <!--Link de atalho para leitores de tela e navegação por teclado-->
+    <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+    <!--Cabeçalho-->
+    <header role="banner">
+        <div class="header-container">
+            <!--Logo-->
+            <a href="index.html" class="logo-link" aria-label="Vestir Consciente | Página Inicial">
+                <img src="images/logo-vestirconsciente.png" alt="Logo Vestir Consciente: Tear Afegão representando a moda circular com uma folha verde no centro" class="logo-img">
+            </a>
+            <!--Navegação Principal-->
+            <nav aria-label="Navegação Principal" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="modacircular.html">Moda Circular</a></li>
+                    <li><a href="slowfashion.html">Slow Fashion</a></li>
+                    <li><a href="materiais.html">Materiais</a></li>
+                    <li><a href="galeria.html" aria-current="page" class="active">Galeria</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Conteúdo Principal-->
+    <main id="main-content" tabindex="-1">
+        <!--Campo de Abertura da Página-->
+        <section class="page-hero page-hero--imagem page-hero--galeria" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Galeria e Processos Artesanais</h1>
+                <p class="hero-text">
+                    Veja as peças das coleções e o que existe antes de cada uma ficar pronta, com descrição completa de todas as imagens.
+                </p>
+            </div>
+        </section>
+        <!--Campo Explicativo (Como explorar)-->
+        <section class="content-section" aria-labelledby="como-title">
+            <div class="container">
+                <h2 id="como-title">Como Explorar a Galeria</h2>
+                <ul class="inclusion-list">
+                    <li><strong>Descrição detalhada:</strong> abaixo de cada imagem há um botão que abre um texto completo, pensado para leitores de tela. Use Enter ou Espaço para abrir e fechar.</li>
+                    <li><strong>Filtro por tema:</strong> na seção de coleções, escolha Moda Circular, Slow Fashion ou Materiais Ecológicos para ver só as peças de cada página.</li>
+                    <li><strong>Fonte:</strong> cada imagem traz a indicação de onde ela veio.</li>
+                </ul>
+            </div>
+        </section>
+        <!--Campo da Galeria (Coleções)-->
+        <section id="colecoes" class="content-section content-section--alt" aria-labelledby="colecoes-title">
+            <div class="container">
+                <h2 id="colecoes-title">Coleções em Imagens</h2>
+                <p class="section-intro">Peças dos catálogos de moda circular, slow fashion e materiais ecológicos.</p>
+                <p class="note-ficticio">As peças são as mesmas dos catálogos do site, que são fictícios e foram criados para demonstrar o funcionamento da página.</p>
+                <section class="filtros" aria-labelledby="filtros-title">
+                    <h3 id="filtros-title">Filtrar por tema</h3>
+                    <form aria-labelledby="filtros-title">
+                        <fieldset>
+                            <legend>Tema</legend>
+                            <div class="filtro-opcoes">
+                                <label for="gal-todos"><input type="radio" id="gal-todos" name="tema" value="todos" checked> Todos</label>
+                                <label for="gal-circular"><input type="radio" id="gal-circular" name="tema" value="circular"> Moda Circular</label>
+                                <label for="gal-slow"><input type="radio" id="gal-slow" name="tema" value="slow"> Slow Fashion</label>
+                                <label for="gal-materiais"><input type="radio" id="gal-materiais" name="tema" value="materiais"> Materiais Ecológicos</label>
+                            </div>
+                        </fieldset>
+                        <button type="reset" class="btn btn-secondary">Limpar filtro</button>
+                    </form>
+                </section>
+                <div class="galeria-grid">
+                    <figure class="galeria-item colecao tema-circular">
+                        <img src="images/peca-vestido-bordado.jpg" width="640" height="640" alt="Vestido longo verde-claro com bordados" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Vestido longo bordado</strong>
+                            <span class="galeria-tema">Moda Circular</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Vestido longo bordado</span></summary>
+                                <p>Vestido longo verde-claro de alças finas, com bordados de flores em tons de marrom e saia de tule dourado com babados, estendido sobre um lençol branco.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="modacircular.html#catalogo" class="card-link" aria-label="Ver no catálogo: Vestido longo bordado">Ver no catálogo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-circular">
+                        <img src="images/peca-jaqueta-jeans-bordada.jpg" width="640" height="640" alt="Jaqueta jeans verde-escura com flores bordadas" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Jaqueta jeans bordada</strong>
+                            <span class="galeria-tema">Moda Circular</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Jaqueta jeans bordada</span></summary>
+                                <p>Jaqueta jeans verde-escura com zíper frontal, cinto e flores bordadas em branco e laranja, sobre um lençol branco.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="modacircular.html#catalogo" class="card-link" aria-label="Ver no catálogo: Jaqueta jeans bordada">Ver no catálogo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-circular">
+                        <img src="images/peca-sueter-listrado.jpg" width="640" height="640" alt="Suéter de tricô com listras coloridas" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Suéter listrado de tricô</strong>
+                            <span class="galeria-tema">Moda Circular</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Suéter listrado de tricô</span></summary>
+                                <p>Suéter de tricô com listras coloridas em tons de verde, laranja, azul e marrom, sobre uma manta branca felpuda.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="modacircular.html#catalogo" class="card-link" aria-label="Ver no catálogo: Suéter listrado de tricô">Ver no catálogo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-circular">
+                        <img src="images/peca-bolsa-bordada.jpg" width="640" height="640" alt="Bolsa de couro marrom com flores bordadas" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Bolsa de couro bordada</strong>
+                            <span class="galeria-tema">Moda Circular</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Bolsa de couro bordada</span></summary>
+                                <p>Bolsa de couro marrom em formato de sela, com flores bordadas em tons de amarelo, rosa e verde.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="modacircular.html#catalogo" class="card-link" aria-label="Ver no catálogo: Bolsa de couro bordada">Ver no catálogo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-slow">
+                        <img src="images/slow-bolsa-retalhos.jpg" width="640" height="640" alt="Bolsa de ombro feita de retalhos" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Bolsa de retalhos patchwork</strong>
+                            <span class="galeria-tema">Slow Fashion</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Bolsa de retalhos patchwork</span></summary>
+                                <p>Bolsa de ombro feita de retalhos em tons de marrom e dourado, com bordados, rendas, contas e uma cena bordada ao centro, com alça larga cor de areia e pingente de renda.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="slowfashion.html#produtos" class="card-link" aria-label="Ver as peças: Bolsa de retalhos patchwork">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-slow">
+                        <img src="images/slow-casaquinho-trico.jpg" width="640" height="640" alt="Casaquinho de tricô verde-oliva bordado" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Casaquinho de tricô bordado</strong>
+                            <span class="galeria-tema">Slow Fashion</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Casaquinho de tricô bordado</span></summary>
+                                <p>Casaquinho de tricô verde-oliva com bordados de estrelas escuras e detalhes vermelhos, cordão com laço no decote e mangas em sino, exibido em um manequim.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="slowfashion.html#produtos" class="card-link" aria-label="Ver as peças: Casaquinho de tricô bordado">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-slow">
+                        <img src="images/slow-gorro-croche.jpg" width="640" height="640" alt="Gorro de crochê verde-oliva com flor" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Gorro de crochê com flor</strong>
+                            <span class="galeria-tema">Slow Fashion</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Gorro de crochê com flor</span></summary>
+                                <p>Gorro de crochê verde-oliva com uma flor de crochê na lateral, sobre uma toalha xadrez rosa-acinzentada e branca.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="slowfashion.html#produtos" class="card-link" aria-label="Ver as peças: Gorro de crochê com flor">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-slow">
+                        <img src="images/slow-bolsa-jeans.jpg" width="640" height="640" alt="Bolsa transversal de jeans reaproveitado" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Bolsa de jeans reaproveitado</strong>
+                            <span class="galeria-tema">Slow Fashion</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Bolsa de jeans reaproveitado</span></summary>
+                                <p>Bolsa transversal feita de jeans reaproveitado, tingida em tons de verde e amarelo, com tachas metálicas, alça ajustável e aba com botão, sobre uma manta cinza felpuda.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="slowfashion.html#produtos" class="card-link" aria-label="Ver as peças: Bolsa de jeans reaproveitado">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-materiais">
+                        <img src="images/mat-camisa-ecoprint.jpg" width="640" height="640" alt="Camisa verde-acinzentada com folhas estampadas" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Camisa com estampa de folhas</strong>
+                            <span class="galeria-tema">Materiais Ecológicos</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Camisa com estampa de folhas</span></summary>
+                                <p>Camisa de manga curta em tom verde-acinzentado, com folhas verdes estampadas diretamente no tecido, botões de madeira e bolso no peito.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="materiais.html#pecas" class="card-link" aria-label="Ver as peças: Camisa com estampa de folhas">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-materiais">
+                        <img src="images/mat-echarpe-shibori.jpg" width="640" height="640" alt="Echarpe com manchas verdes e azuis" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Echarpe shibori</strong>
+                            <span class="galeria-tema">Materiais Ecológicos</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Echarpe shibori</span></summary>
+                                <p>Echarpe leve com manchas em verde-acinzentado e azul-petróleo sobre fundo branco, no estilo tie-dye, enrolada em um manequim.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="materiais.html#pecas" class="card-link" aria-label="Ver as peças: Echarpe shibori">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-materiais">
+                        <img src="images/mat-saia-renda.jpg" width="640" height="640" alt="Saia longa verde com renda" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Saia tingida com renda reaproveitada</strong>
+                            <span class="galeria-tema">Materiais Ecológicos</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Saia tingida com renda reaproveitada</span></summary>
+                                <p>Saia longa verde com efeito manchado, cintura com elástico franzido e aplicação de renda vazada na altura do quadril, pendurada em um cabide de madeira.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="materiais.html#pecas" class="card-link" aria-label="Ver as peças: Saia tingida com renda reaproveitada">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item colecao tema-materiais">
+                        <img src="images/mat-jaqueta-brim.jpg" width="640" height="640" alt="Jaqueta verde-oliva de brim com tiras e fivelas" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Jaqueta de brim reaproveitado</strong>
+                            <span class="galeria-tema">Materiais Ecológicos</span>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Jaqueta de brim reaproveitado</span></summary>
+                                <p>Jaqueta ampla cor verde-oliva em tecido de brim, com gola alta, tiras com fivelas na frente, bolsos com botões e zíper no peito, aberta sobre um lençol branco.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                            <a href="materiais.html#pecas" class="card-link" aria-label="Ver as peças: Jaqueta de brim reaproveitado">Ver as peças</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!--Campo da Galeria (Processos e matérias-primas)-->
+        <section id="processos" class="content-section" aria-labelledby="processos-title">
+            <div class="container">
+                <h2 id="processos-title">Matérias-Primas e Ferramentas</h2>
+                <p class="section-intro">Fios, tecidos, botões e etiquetas: o que existe antes de a peça ficar pronta.</p>
+                <div class="galeria-grid galeria-grid--processos">
+                    <figure class="galeria-item galeria-item--larga">
+                        <img src="images/galeria-rolos.jpg" width="1200" height="396" alt="Rolos de tecido em tons de verde e bege" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Rolos de tecido</strong>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Rolos de tecido</span></summary>
+                                <p>Rolos de tecido enfileirados, em tons de verde-oliva, verde-claro, bege e creme, com texturas de waffle, linho e gaze, diante de um fundo verde-oliva liso.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item galeria-item--quadrado">
+                        <img src="images/galeria-carreteis.jpg" width="800" height="800" alt="Carretéis de linha em tons de verde e marrom" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Carretéis de linha</strong>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Carretéis de linha</span></summary>
+                                <p>Carretéis de linha de costura em tons de verde-oliva, marrom e vermelho-escuro, vistos de perto e dispostos lado a lado.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item galeria-item--retrato">
+                        <img src="images/galeria-novelos.jpg" width="736" height="981" alt="Novelos de fio de algodão cru e verde" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Novelos de fio de algodão</strong>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Novelos de fio de algodão</span></summary>
+                                <p>Novelos de fio de algodão grosso e retorcido, vistos de cima, em tom cru e em verde com variações de cor.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item galeria-item--alto">
+                        <img src="images/galeria-botoes.jpg" width="490" height="735" alt="Botões de vários tamanhos em tons de verde" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Botões reaproveitados</strong>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Botões reaproveitados</span></summary>
+                                <p>Grande quantidade de botões misturados, de tamanhos e formatos variados, em tons de verde, cinza, marrom e azul-petróleo, com alguns amarelos.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria-item galeria-item--alto">
+                        <img src="images/galeria-etiqueta.jpg" width="600" height="900" alt="Etiqueta costurada em peça verde-oliva" loading="lazy">
+                        <figcaption>
+                            <strong class="galeria-titulo">Etiqueta Made to be re-made</strong>
+                            <details class="descricao">
+                                <summary>Descrição detalhada<span class="so-leitor"> da imagem: Etiqueta Made to be re-made</span></summary>
+                                <p>Etiqueta de tecido costurada em uma peça verde-oliva, com a frase em inglês Made to be re-made, que significa feito para ser refeito, em letras brancas, ao lado da costura da gola.</p>
+                            </details>
+                            <p class="credito">Fonte: [a informar]</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!--Campo de Ligação com a Mídia-->
+        <section class="content-section content-section--alt text-center" aria-labelledby="midia-title">
+            <div class="container">
+                <h2 id="midia-title">Prefere Ver e Ouvir?</h2>
+                <p class="section-intro">Na página de mídia você encontra vídeo e áudio sobre moda sustentável e o trabalho dos ateliês.</p>
+                <p><a href="midia.html" class="btn btn-secondary">Ir para a Mídia</a></p>
+            </div>
+        </section>
+        <!--Campo de Chamada para Ação-->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title">Quer Mostrar o Seu Trabalho?</h2>
+                <p>Envie fotos do seu processo ou da sua peça pelo formulário de contato e fale com a nossa equipe.</p>
+                <div class="hero-buttons">
+                    <a href="contato.html" class="btn btn-primary">Falar com a Equipe</a>
+                    <a href="materiais.html" class="btn btn-secondary">Conhecer os Materiais</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Rodapé-->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h2 class="footer-brand">Vestir Consciente</h2>
+                <p>Plataforma de Moda Sustentável, Inclusão e Economia Circular.</p>
+                <p><small>&copy; 2026 Vestir Consciente. Projeto Acadêmico de Desenvolvimento Web</small></p>
+            </div>
+            <div class="footer-col">
+                <h3>Acesso Rápido</h3>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Quem Somos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Acessibilidade e Políticas</h3>
+                <ul>
+                    <li><a href="contato.html#acessibilidade">Suporte PCD</a></li>
+                    <li><a href="contato.html#privacidade">Privacidade e LGPD</a></li>
+                    <li><a href="#top">Voltar ao topo da página</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

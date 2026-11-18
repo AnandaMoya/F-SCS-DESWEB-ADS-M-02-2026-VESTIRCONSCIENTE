@@ -1170,7 +1170,123 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--accent-color2);
 }
 
-/* 14) Responsividade das páginas internas (único @media de celular do arquivo) */
+/* 14) Página Galeria */
+/* 14.1) Fundo da abertura: coloque a foto em images/hero-galeria.jpg
+   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+.page-hero--galeria {
+    background-image: linear-gradient(rgba(42, 41, 41, 0.5), rgba(42, 41, 41, 0.5)), url("../images/hero-galeria.jpg");
+}
+
+/* 14.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
+#colecoes,
+#processos {
+    scroll-margin-top: 160px;
+}
+
+/* 14.3) Grade e cartões da galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.galeria-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-dark);
+}
+
+.galeria-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.galeria-item--retrato img {
+    aspect-ratio: 3 / 4;
+}
+
+.galeria-item--alto img {
+    aspect-ratio: 2 / 3;
+}
+
+.galeria-item--larga {
+    grid-column: 1 / -1;
+}
+
+.galeria-item--larga img {
+    aspect-ratio: 3 / 1;
+}
+
+.galeria-item figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.galeria-titulo {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+}
+
+.galeria-tema {
+    align-self: flex-start;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--accent-color2);
+    border: 1px solid var(--primary-dark);
+    color: var(--text-color);
+}
+
+/* 14.4) Descrição detalhada (abre e fecha sem JavaScript) */
+.descricao summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.descricao summary:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+.descricao p {
+    margin-top: 8px;
+}
+
+/* Texto lido só por leitores de tela (completa o nome do botão de cada imagem) */
+.so-leitor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.credito {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* 14.5) Filtro por tema (funciona só com CSS, sem JavaScript) */
+main:has(#gal-circular:checked) .colecao:not(.tema-circular),
+main:has(#gal-slow:checked) .colecao:not(.tema-slow),
+main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
+    display: none;
+}
+
+/* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
 @media (max-width: 768px) {
     .page-hero,
     .page-hero--imagem {
@@ -1217,6 +1333,11 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     #pecas {
         background-attachment: scroll;
         background-size: 500px auto;
+    }
+
+    /* Galeria */
+    .galeria-item--larga img {
+        aspect-ratio: 3 / 2;
     }
 
     /* Materiais */
