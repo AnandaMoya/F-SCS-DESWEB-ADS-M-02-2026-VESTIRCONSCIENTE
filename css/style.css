@@ -1391,6 +1391,80 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     white-space: nowrap;
 }
 
+/* 14c) Página Mídia */
+/* Fundo da abertura: coloque a foto em images/hero-midia.jpg
+   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+.page-hero--midia {
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-midia.jpg");
+}
+
+#video,
+#audio,
+#costura,
+#mapa {
+    scroll-margin-top: 160px;
+}
+
+.midia-figura {
+    max-width: 960px;
+    margin: 24px auto 0 auto;
+}
+
+.midia-figura video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #241304;
+    border-radius: 8px;
+}
+
+.midia-figura audio {
+    display: block;
+    width: 100%;
+}
+
+.midia-figura--audio {
+    max-width: 640px;
+}
+
+.midia-figura figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.midia-figura figcaption a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+
+.mapa-moldura {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid var(--primary-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--accent-color3);
+}
+
+.mapa-moldura iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#video .descricao,
+#costura .descricao,
+#audio .descricao {
+    max-width: 960px;
+    margin: 16px auto 0 auto;
+}
+
 /* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
 @media (max-width: 768px) {
     .page-hero,
@@ -1433,6 +1507,10 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
         background-attachment: scroll;
         background-size: auto 700px;
         background-repeat: repeat-y;
+    }
+
+    .mapa-moldura {
+        aspect-ratio: 4 / 3;
     }
 
     #recentes {
