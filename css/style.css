@@ -1458,11 +1458,46 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     border: 0;
 }
 
+.midia-nota {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 20px 0 0 0;
+}
+
 #video .descricao,
 #costura .descricao,
 #audio .descricao {
     max-width: 960px;
     margin: 16px auto 0 auto;
+}
+
+/* 14d) Página Orçamento */
+.page-hero--orcamento {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-orcamento.jpg");
+    background-position: center;
+}
+
+#resumo,
+#hospedagem,
+#dominio,
+#custos,
+#justificativa,
+#fontes {
+    scroll-margin-top: 160px;
+}
+
+.tabela-orcamento {
+    min-width: 760px;
+}
+
+.tabela-orcamento td:nth-child(3) {
+    white-space: normal;
+}
+
+#fontes .inclusion-list a {
+    overflow-wrap: anywhere;
 }
 
 /* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
