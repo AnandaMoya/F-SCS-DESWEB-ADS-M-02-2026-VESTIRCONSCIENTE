@@ -1500,6 +1500,225 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     overflow-wrap: anywhere;
 }
 
+/* 14e) Página Contato */
+.page-hero--contato {
+    background-color: #241304;
+    background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-contato.jpg");
+    background-position: center;
+}
+
+#formulario,
+#autoria,
+#acessibilidade,
+#privacidade,
+#mensagem-enviada {
+    scroll-margin-top: 160px;
+}
+
+.contato-grade {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid var(--accent-color3);
+    border-top: 5px solid var(--primary-dark);
+    border-radius: 8px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.campos-duplos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contato-form label,
+.contato-form legend {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.contato-form legend {
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form input[type="tel"],
+.contato-form input[type="number"],
+.contato-form input[type="date"],
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+}
+
+.contato-form textarea {
+    resize: vertical;
+}
+
+.contato-form input:focus-visible,
+.contato-form select:focus-visible,
+.contato-form textarea:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 2px;
+    background-color: var(--accent-color2);
+}
+
+.contato-form input:user-invalid,
+.contato-form select:user-invalid,
+.contato-form textarea:user-invalid {
+    border-color: #8b1a1a;
+    border-width: 3px;
+}
+
+.dica {
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.contato-form input:user-invalid ~ .dica,
+.contato-form select:user-invalid ~ .dica,
+.contato-form textarea:user-invalid ~ .dica,
+.campo-opcoes:has(input:user-invalid) .dica {
+    color: #8b1a1a;
+    font-weight: 700;
+}
+
+.contato-form input:user-invalid ~ .dica::before,
+.contato-form select:user-invalid ~ .dica::before,
+.contato-form textarea:user-invalid ~ .dica::before,
+.campo-opcoes:has(input:user-invalid) .dica::before {
+    content: "Atenção: ";
+}
+
+.campo-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contato-form .opcao {
+    font-weight: 400;
+}
+
+.opcao input {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    accent-color: var(--primary-dark);
+}
+
+.opcao input:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+.contato-form a {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.form-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+button.btn {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.confirmacao {
+    display: none;
+    max-width: 760px;
+    margin: 0 auto 30px auto;
+    padding: 24px 30px;
+    text-align: center;
+    color: var(--bg-color);
+    background-color: var(--primary-dark);
+    border-radius: 8px;
+}
+
+.confirmacao:target {
+    display: block;
+}
+
+.confirmacao h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.confirmacao p {
+    margin-bottom: 16px;
+}
+
+.confirmacao a:not(.btn) {
+    color: var(--bg-color);
+}
+
+.confirmacao .btn-secondary {
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
+.confirmacao .btn-secondary:hover,
+.confirmacao .btn-secondary:focus {
+    background-color: var(--bg-color);
+    color: var(--primary-dark);
+}
+
+.contato-lateral .info-card p {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.info-grid--unico {
+    grid-template-columns: minmax(0, 560px);
+    justify-content: center;
+}
+
+#privacidade .inclusion-list {
+    margin-top: 30px;
+}
+
 /* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
 @media (max-width: 768px) {
     .page-hero,
@@ -1573,6 +1792,19 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
 
     .dado-numero {
         font-size: 2rem;
+    }
+
+    /* Contato */
+    .contato-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-form {
+        padding: 20px;
     }
 }
 

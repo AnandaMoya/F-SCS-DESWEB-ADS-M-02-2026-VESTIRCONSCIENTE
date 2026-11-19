@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Suporte Acessível: Fale com a Equipe | Vestir Consciente</title>
+    <meta name="description" content="Fale com a equipe do Vestir Consciente: envie dúvidas, proposta de parceria ou cadastro de marca por um formulário acessível, com suporte para pessoas com deficiência.">
+    <!--Fontes (Google Fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--CSS Externo-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+    <!--Link de atalho para leitores de tela e navegação por teclado-->
+    <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+    <!--Cabeçalho-->
+    <header role="banner">
+        <div class="header-container">
+            <!--Logo-->
+            <a href="index.html" class="logo-link" aria-label="Vestir Consciente | Página Inicial">
+                <img src="images/logo-vestirconsciente.png" alt="Logo Vestir Consciente: Tear Afegão representando a moda circular com uma folha verde no centro" class="logo-img">
+            </a>
+            <!--Navegação Principal-->
+            <nav aria-label="Navegação Principal" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="modacircular.html">Moda Circular</a></li>
+                    <li><a href="slowfashion.html">Slow Fashion</a></li>
+                    <li><a href="materiais.html">Materiais</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                    <li><a href="contato.html" aria-current="page" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Conteúdo Principal-->
+    <main id="main-content" tabindex="-1">
+        <!--Campo de Abertura da Página-->
+        <section class="page-hero page-hero--imagem page-hero--contato" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Contato e Suporte Acessível</h1>
+                <p class="hero-text">
+                    Tem uma dúvida, quer propor uma parceria ou cadastrar sua marca? Escreva para a nossa equipe. O formulário funciona com teclado e leitor de tela.
+                </p>
+            </div>
+        </section>
+        <!--Campo do Formulário e dos Canais de Contato-->
+        <section id="formulario" class="content-section" aria-labelledby="formulario-title">
+            <div class="container">
+                <h2 id="formulario-title">Envie sua Mensagem</h2>
+                <p class="section-intro">Os campos com asterisco (*) são obrigatórios. Se algum campo estiver errado, o navegador avisa antes do envio.</p>
+                <div id="mensagem-enviada" class="confirmacao" role="status" tabindex="-1">
+                    <h3>Mensagem enviada</h3>
+                    <p>Obrigada pelo contato! Esta é uma página de demonstração, então a mensagem não foi guardada nem enviada a ninguém. Veja a seção <a href="#privacidade">Privacidade e LGPD</a>.</p>
+                    <a href="#formulario" class="btn btn-secondary">Enviar outra mensagem</a>
+                </div>
+                <div class="contato-grade">
+                    <form class="contato-form" action="contato.html#mensagem-enviada" method="get" aria-labelledby="formulario-title">
+                        <div class="campo">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" required aria-required="true" minlength="3" maxlength="80" autocomplete="name" aria-describedby="nome-dica">
+                            <small id="nome-dica" class="dica">Informe nome e sobrenome, com pelo menos 3 letras.</small>
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required aria-required="true" maxlength="120" autocomplete="email" aria-describedby="email-dica">
+                            <small id="email-dica" class="dica">Use um endereço no formato nome@exemplo.com.</small>
+                        </div>
+                        <div class="campos-duplos">
+                            <div class="campo">
+                                <label for="telefone">Telefone com DDD (opcional)</label>
+                                <input type="tel" id="telefone" name="telefone" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" inputmode="tel" autocomplete="tel" placeholder="(11) 91234-5678" aria-describedby="telefone-dica">
+                                <small id="telefone-dica" class="dica">Digite o DDD e o número, por exemplo (11) 91234-5678.</small>
+                            </div>
+                            <div class="campo">
+                                <label for="assunto">Assunto *</label>
+                                <select id="assunto" name="assunto" required aria-required="true" aria-describedby="assunto-dica">
+                                    <option value="">Escolha um assunto</option>
+                                    <option value="parcerias">Parcerias</option>
+                                    <option value="duvidas">Dúvidas</option>
+                                    <option value="cadastro-marca">Cadastro de marca</option>
+                                    <option value="encomenda">Encomenda de peça</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                                <small id="assunto-dica" class="dica">Escolha uma das opções da lista.</small>
+                            </div>
+                        </div>
+                        <div class="campos-duplos">
+                            <div class="campo">
+                                <label for="quantidade">Quantidade de peças (opcional)</label>
+                                <input type="number" id="quantidade" name="quantidade" min="1" max="50" step="1" inputmode="numeric" aria-describedby="quantidade-dica">
+                                <small id="quantidade-dica" class="dica">Para encomendas: um número inteiro de 1 a 50.</small>
+                            </div>
+                            <div class="campo">
+                                <label for="prazo">Prazo desejado (opcional)</label>
+                                <input type="date" id="prazo" name="prazo" aria-describedby="prazo-dica">
+                                <small id="prazo-dica" class="dica">Escolha a data em que precisa da resposta ou da peça.</small>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" required aria-required="true" minlength="10" maxlength="500" aria-describedby="mensagem-dica"></textarea>
+                            <small id="mensagem-dica" class="dica">Escreva de 10 a 500 caracteres.</small>
+                        </div>
+                        <fieldset class="campo-opcoes">
+                            <legend>Preferências de acessibilidade</legend>
+                            <label class="opcao" for="suporte">
+                                <input type="checkbox" id="suporte" name="suporte" value="sim">
+                                <span>Quero retorno com suporte específico, como linguagem simples, texto ampliado ou contato por telefone.</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="campo-opcoes">
+                            <legend>Privacidade *</legend>
+                            <label class="opcao" for="lgpd">
+                                <input type="checkbox" id="lgpd" name="lgpd" value="aceito" required aria-required="true" aria-describedby="lgpd-dica">
+                                <span>Li e concordo com o uso dos meus dados descrito em <a href="#privacidade">Privacidade e LGPD</a>.</span>
+                            </label>
+                            <small id="lgpd-dica" class="dica">Marque a caixa para poder enviar a mensagem.</small>
+                        </fieldset>
+                        <div class="form-acoes">
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            <button type="reset" class="btn btn-secondary">Limpar Campos</button>
+                        </div>
+                    </form>
+                    <aside class="contato-lateral" aria-labelledby="canais-title">
+                        <div class="info-card">
+                            <h3 id="canais-title">Outros Canais</h3>
+                            <p><strong>E-mail:</strong> contato@vestirconsciente.exemplo</p>
+                            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                            <p><strong>Atendimento:</strong> segunda a sexta, das 9h às 17h</p>
+                            <p><strong>Local:</strong> Fatec São Caetano do Sul, R. Bel Aliance, 225, Jardim São Caetano, São Caetano do Sul (SP)</p>
+                            <p class="midia-nota">E-mail e telefone são fictícios, criados para este projeto acadêmico.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <!--Campo de Autoria-->
+        <section id="autoria" class="content-section content-section--alt" aria-labelledby="autoria-title">
+            <div class="container">
+                <h2 id="autoria-title">Quem Desenvolveu o Projeto</h2>
+                <p class="section-intro">Aluna do segundo semestre do curso de Análise e Desenvolvimento de Sistemas da Fatec São Caetano do Sul.</p>
+                <div class="info-grid info-grid--unico">
+                    <article class="info-card">
+                        <h3>Ananda Alves Moya</h3>
+                        <p><strong>Função:</strong> desenvolvimento completo do site, do planejamento ao conteúdo.</p>
+                        <p><strong>Disciplina:</strong> Desenvolvimento Web.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--Campo de Acessibilidade-->
+        <section id="acessibilidade" class="content-section" aria-labelledby="acessibilidade-title">
+            <div class="container">
+                <h2 id="acessibilidade-title">Suporte PCD e Acessibilidade</h2>
+                <p class="section-intro">O site foi pensado para ser usado por todas as pessoas. Veja o que já existe e como pedir ajuda.</p>
+                <ul class="inclusion-list">
+                    <li><strong>Teclado:</strong> todo o site e este formulário funcionam só com a tecla Tab, e o foco aparece com destaque.</li>
+                    <li><strong>Leitor de tela:</strong> os campos têm rótulo, dica de preenchimento e indicação de obrigatório.</li>
+                    <li><strong>Contraste e texto:</strong> as cores seguem o nível AA do WCAG, e o texto pode ser ampliado pelo navegador.</li>
+                    <li><strong>Retorno personalizado:</strong> marque a opção de suporte específico no formulário para receber resposta em linguagem simples, em texto ampliado ou por telefone.</li>
+                </ul>
+            </div>
+        </section>
+        <!--Campo de Privacidade-->
+        <section id="privacidade" class="content-section content-section--alt" aria-labelledby="privacidade-title">
+            <div class="container">
+                <h2 id="privacidade-title">Privacidade e LGPD</h2>
+                <p class="section-intro">Como tratamos os dados informados no formulário, de acordo com a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+                <div class="fact-box">
+                    <h3>Este é um projeto acadêmico</h3>
+                    <p>O site não tem servidor para receber mensagens. Ao enviar o formulário, os dados aparecem apenas no endereço do seu navegador (método GET) e não são guardados.</p>
+                    <p>Por isso, não escreva senhas, documentos ou dados sensíveis na mensagem.</p>
+                </div>
+                <ul class="inclusion-list">
+                    <li><strong>Dados pedidos:</strong> nome, e-mail, telefone (opcional), assunto, quantidade, prazo e mensagem.</li>
+                    <li><strong>Finalidade:</strong> responder ao seu contato.</li>
+                    <li><strong>Seus direitos:</strong> acessar, corrigir e pedir a exclusão dos seus dados, escrevendo para o e-mail de contato desta página.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!--Rodapé-->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h2 class="footer-brand">Vestir Consciente</h2>
+                <p>Plataforma de Moda Sustentável, Inclusão e Economia Circular.</p>
+                <p><small>&copy; 2026 Vestir Consciente. Projeto Acadêmico de Desenvolvimento Web</small></p>
+            </div>
+            <div class="footer-col">
+                <h3>Acesso Rápido</h3>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Quem Somos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Acessibilidade e Políticas</h3>
+                <ul>
+                    <li><a href="contato.html#acessibilidade">Suporte PCD</a></li>
+                    <li><a href="contato.html#privacidade">Privacidade e LGPD</a></li>
+                    <li><a href="#top">Voltar ao topo da página</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
