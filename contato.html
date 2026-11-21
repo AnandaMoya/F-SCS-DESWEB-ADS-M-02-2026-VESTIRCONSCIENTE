@@ -64,12 +64,12 @@
                     <form class="contato-form" action="contato.html#mensagem-enviada" method="get" aria-labelledby="formulario-title">
                         <div class="campo">
                             <label for="nome">Nome completo *</label>
-                            <input type="text" id="nome" name="nome" required aria-required="true" minlength="3" maxlength="80" autocomplete="name" aria-describedby="nome-dica">
+                            <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" autocomplete="name" aria-describedby="nome-dica">
                             <small id="nome-dica" class="dica">Informe nome e sobrenome, com pelo menos 3 letras.</small>
                         </div>
                         <div class="campo">
                             <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required aria-required="true" maxlength="120" autocomplete="email" aria-describedby="email-dica">
+                            <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" aria-describedby="email-dica">
                             <small id="email-dica" class="dica">Use um endereço no formato nome@exemplo.com.</small>
                         </div>
                         <div class="campos-duplos">
@@ -80,7 +80,7 @@
                             </div>
                             <div class="campo">
                                 <label for="assunto">Assunto *</label>
-                                <select id="assunto" name="assunto" required aria-required="true" aria-describedby="assunto-dica">
+                                <select id="assunto" name="assunto" required aria-describedby="assunto-dica">
                                     <option value="">Escolha um assunto</option>
                                     <option value="parcerias">Parcerias</option>
                                     <option value="duvidas">Dúvidas</option>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="campo">
                             <label for="mensagem">Mensagem *</label>
-                            <textarea id="mensagem" name="mensagem" rows="6" required aria-required="true" minlength="10" maxlength="500" aria-describedby="mensagem-dica"></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="6" required minlength="10" maxlength="500" aria-describedby="mensagem-dica"></textarea>
                             <small id="mensagem-dica" class="dica">Escreva de 10 a 500 caracteres.</small>
                         </div>
                         <fieldset class="campo-opcoes">
@@ -118,7 +118,7 @@
                         <fieldset class="campo-opcoes">
                             <legend>Privacidade *</legend>
                             <label class="opcao" for="lgpd">
-                                <input type="checkbox" id="lgpd" name="lgpd" value="aceito" required aria-required="true" aria-describedby="lgpd-dica">
+                                <input type="checkbox" id="lgpd" name="lgpd" value="aceito" required aria-describedby="lgpd-dica">
                                 <span>Li e concordo com o uso dos meus dados descrito em <a href="#privacidade">Privacidade e LGPD</a>.</span>
                             </label>
                             <small id="lgpd-dica" class="dica">Marque a caixa para poder enviar a mensagem.</small>
