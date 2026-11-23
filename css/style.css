@@ -2,7 +2,7 @@
 :root {
     --bg-color: #e8e3d5; /*Bege Claro*/
     --text-color: #55371a; /*Marrom Escuro (textos e bordas)*/
-    --primary-dark: #556b2f; /*Verde Oliva Escuro*/
+    --primary-dark: #4d6129; /*Verde Oliva Escuro*/
     --card-bg: #e8e3d5;
     --accent-color: #BFC9AD;
     --accent-color2: #e2edce;
@@ -33,7 +33,7 @@ body {
     top: -40px;
     left: 0;
     background: var(--primary-dark);
-    color: var(--accent-color);
+    color: #ffffff;
     padding: 8px 16px;
     z-index: 100;
     transition: top 0.3s;
@@ -240,7 +240,7 @@ body > header {
 
 .card {
     background-color: var(--bg-color);
-    border: 1px solid #556b2f;
+    border: 1px solid var(--primary-dark);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -436,6 +436,19 @@ a:focus, button:focus {
     outline-offset: 3px;
 }
 
+/* Foco do menu: contorno próprio, diferente do estado ativo e do hover */
+#main-nav a:focus-visible {
+    outline: 3px solid var(--text-color);
+    outline-offset: 4px;
+}
+
+/* Foco no rodapé escuro: contorno claro para manter contraste mínimo de 3:1 */
+body > footer a:focus,
+body > footer a:focus-visible {
+    outline: 3px solid var(--accent-color2);
+    outline-offset: 3px;
+}
+
 /* 9) Páginas Internas: componentes compartilhados */
 /* 9.1) Abertura da página (equivalente ao hero, em tamanho menor) */
 .page-hero {
@@ -481,7 +494,7 @@ a:focus, button:focus {
 
 /* Fundo específico de cada página (o caminho é relativo a este arquivo CSS) */
 .page-hero--sobre {
-    background-image: linear-gradient(rgba(42, 41, 41, 0.4), rgba(42, 41, 41, 0.4)), url("../images/hero-sobre.jpg");
+    background-image: linear-gradient(rgba(42, 41, 41, 0.62), rgba(42, 41, 41, 0.62)), url("../images/hero-sobre.jpg");
 }
 
 /* 9.2) Seções de conteúdo */
@@ -717,7 +730,7 @@ a:focus, button:focus {
 /* 11.1) Fundo da abertura: coloque a foto em images/hero-modacircular.jpg
    (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
 .page-hero--modacircular {
-    background-image: linear-gradient(rgba(42, 41, 41, 0.4), rgba(42, 41, 41, 0.4)), url("../images/hero-modacircular.jpg");
+    background-image: linear-gradient(rgba(42, 41, 41, 0.7), rgba(42, 41, 41, 0.7)), url("../images/hero-modacircular.jpg");
 }
 
 /* 11.2) Foto ao lado do texto */
@@ -927,7 +940,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 12.1) Fundo da abertura: coloque a foto em images/hero-slowfashion.jpg
    (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
 .page-hero--slowfashion {
-    background-image: linear-gradient(rgba(42, 41, 41, 0.6), rgba(42, 41, 41, 0.6)), url("../images/hero-slowfashion.jpg");
+    background-image: linear-gradient(rgba(42, 41, 41, 0.65), rgba(42, 41, 41, 0.65)), url("../images/hero-slowfashion.jpg");
 }
 
 /* 12.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links #criadores e #produtos */
@@ -996,7 +1009,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 13.1) Fundo da abertura: coloque a foto em images/hero-materiais.jpg
    Enquanto a foto não existir, a abertura aparece em marrom escuro, com o texto claro. */
 .page-hero--materiais {
-    background-image: linear-gradient(rgba(42, 41, 41, 0.5), rgba(42, 41, 41, 0.5)), url("../images/hero-materiais.jpg");
+    background-image: linear-gradient(rgba(42, 41, 41, 0.72), rgba(42, 41, 41, 0.72)), url("../images/hero-materiais.jpg");
 }
 
 /* 13.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
@@ -1174,7 +1187,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 14.1) Fundo da abertura: coloque a foto em images/hero-galeria.jpg
    (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
 .page-hero--galeria {
-    background-image: linear-gradient(rgba(42, 41, 41, 0.5), rgba(42, 41, 41, 0.5)), url("../images/hero-galeria.jpg");
+    background-image: linear-gradient(rgba(42, 41, 41, 0.72), rgba(42, 41, 41, 0.72)), url("../images/hero-galeria.jpg");
 }
 
 /* 14.2) Âncoras: compensam o cabeçalho fixo ao navegar pelos links internos */
@@ -1297,7 +1310,7 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
 /* Fundo da abertura: coloque a foto em images/hero-noticias.jpg
    (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
 .page-hero--noticias {
-    background-image: linear-gradient(rgba(36, 19, 4, 0.55), rgba(36, 19, 4, 0.55)), url("../images/hero-noticias.jpg");
+    background-image: linear-gradient(rgba(36, 19, 4, 0.65), rgba(36, 19, 4, 0.65)), url("../images/hero-noticias.jpg");
     background-position: center 40%;
 }
 
