@@ -52,7 +52,7 @@ body {
 }
 
 /* 2) Cabeçalho e Navegação Principal */
-header[role="banner"] {
+body > header {
     background-color: var(--bg-color);
     border-bottom: 2px solid var(--primary-dark);
     padding: 20px 0;
@@ -365,7 +365,7 @@ header[role="banner"] {
 }
 
 /* 7) Rodapé */
-footer[role="contentinfo"] {
+body > footer {
     background-color: #241304;
     color: var(--bg-color);
     padding: 60px 0 30px 0;
@@ -1722,7 +1722,7 @@ button.btn {
 /* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
 @media (max-width: 768px) {
     /* Cabeçalho compacto: no celular ele rola junto com a página e ocupa menos espaço */
-    header[role="banner"] {
+    body > header {
         position: static;
         padding: 10px 0;
     }
