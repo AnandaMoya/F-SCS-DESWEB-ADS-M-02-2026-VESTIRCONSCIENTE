@@ -3,13 +3,13 @@
     --bg-color: #e8e3d5; /*Bege Claro*/
     --text-color: #55371a; /*Marrom Escuro (textos e bordas)*/
     --primary-dark: #4d6129; /*Verde Oliva Escuro*/
-    --card-bg: #e8e3d5;
-    --accent-color: #BFC9AD;
-    --accent-color2: #e2edce;
-    --accent-color3: #d7d8c5;
+    --card-bg: #e8e3d5; /*Bege Claro*/
+    --accent-color: #BFC9AD; /*Verde Claro Apagado*/
+    --accent-color2: #e2edce; /*Verde Claro Saturado*/
+    --accent-color3: #d7d8c5; /*Verde Claro Menos Saturado*/
 
-    --font-serif: 'Playfair Display', Georgia, serif; /* Estilo editorial */
-    --font-sans: 'Montserrat', Arial, sans-serif; /* Alta legibilidade */
+    --font-serif: 'Playfair Display', Georgia, serif; 
+    --font-sans: 'Montserrat', Arial, sans-serif; 
 }
 
 /* 1.1) Reset Básico */
@@ -23,7 +23,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-sans);
-    font-weight: 500; /* Montserrat 500: traço mais firme que o 400, melhora a legibilidade */
+    font-weight: 500; /* Traço mais firme, melhora a legibilidade */
     line-height: 1.6;
 }
 
@@ -104,7 +104,7 @@ body > header {
     border-bottom: 2px solid var(--primary-dark);
     outline: none;
 }
-/* 3) Campo Hero (estilo editorial/capa) */
+/* 3) Campo Hero */
 .hero-section {
     padding: 80px 0 50px 0;
     text-align: center;
@@ -136,7 +136,7 @@ body > header {
     flex-wrap: wrap;
 }
 
-/* 3.1) Botões Estilizados */
+/* 3.1) Botões */
 .btn {
     display: inline-block;
     padding: 14px 28px;
@@ -171,10 +171,8 @@ body > header {
     color: var(--bg-color);
 }
 
-/* 3.2) Banner da Home com imagem de fundo
-   A foto fica em images/hero-home.jpg. Uma camada marrom escura (mesma cor do rodapé)
-   por cima da foto deixa o texto claro legível. Para a foto aparecer mais, diminua o 0.62;
-   para o texto ficar mais legível, aumente. */
+/* 3.2) Banner da Home
+   Foto: images/hero-home.jpg. */
 .hero-section--imagem {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.62), rgba(36, 19, 4, 0.62)), url("../images/hero-home.jpg");
@@ -190,7 +188,7 @@ body > header {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Botões com cores claras sobre a foto escura */
+/* Botões que ficam sobre fotos (contraste) */
 .hero-section--imagem .btn-primary {
     background-color: var(--accent-color2);
     border-color: var(--accent-color2);
@@ -218,7 +216,7 @@ body > header {
     outline-color: var(--accent-color2);
 }
 
-/* 4) Campo dos Três Pilares */
+/* 4) Seção Três Pilares */
 .pilares-section {
     padding: 80px 0;
 }
@@ -234,7 +232,7 @@ body > header {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -290,7 +288,7 @@ body > header {
     border-bottom-color: var(--primary-dark);
 }
 
-/* 5) Destaques e Comunidade */
+/* 5) Destaques */
 .highlights-section {
     background-color: var(--card-bg);
     padding: 70px 0;
@@ -308,7 +306,7 @@ body > header {
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -373,7 +371,7 @@ body > footer {
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -430,7 +428,7 @@ body > footer {
     }
 }
 
-/* 8.1) Foco visível ajustado para acessibilidade (Navegação por Teclado) */
+/* 8.1) Foco visível (Navegação por Teclado) */
 a:focus, button:focus {
     outline: 3px solid var(--primary-dark);
     outline-offset: 3px;
@@ -442,14 +440,14 @@ a:focus, button:focus {
     outline-offset: 4px;
 }
 
-/* Foco no rodapé escuro: contorno claro para manter contraste mínimo de 3:1 */
+/* Foco no rodapé escuro (Contorno Claro) */
 body > footer a:focus,
 body > footer a:focus-visible {
     outline: 3px solid var(--accent-color2);
     outline-offset: 3px;
 }
 
-/* 9) Páginas Internas: componentes compartilhados */
+/* 9) Componentes compartilhados */
 /* 9.1) Abertura da página (equivalente ao hero, em tamanho menor) */
 .page-hero {
     padding: 60px 0 40px 0;
@@ -468,11 +466,7 @@ body > footer a:focus-visible {
     color: var(--primary-dark);
 }
 
-/* 9.1.1) Abertura com imagem de fundo
-   A imagem fica no CSS (é decorativa, não precisa de alt).
-   Uma camada marrom escura (mesma cor do rodapé) a 60% por cima da foto deixa o
-   texto bege legível. Para a foto aparecer mais, diminua o 0.6; para o texto
-   ficar mais legível, aumente. */
+/* 9.1.1) Abertura com imagem de fundo */
 .page-hero--imagem {
     background-color: #241304;
     background-size: cover;
@@ -492,7 +486,7 @@ body > footer a:focus-visible {
     margin-bottom: 0;
 }
 
-/* Fundo específico de cada página (o caminho é relativo a este arquivo CSS) */
+/* Fundo específico de cada página */
 .page-hero--sobre {
     background-image: linear-gradient(rgba(42, 41, 41, 0.62), rgba(42, 41, 41, 0.62)), url("../images/hero-sobre.jpg");
 }
@@ -539,7 +533,7 @@ body > footer a:focus-visible {
 /* 9.3) Cartões de informação */
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -560,7 +554,7 @@ body > footer a:focus-visible {
     font-size: 0.95rem;
 }
 
-/* 9.4) Chamada para ação no fim das páginas */
+/* 9.4) Botões para ação no fim das páginas */
 .cta-section {
     padding: 70px 0;
     text-align: center;
@@ -577,7 +571,7 @@ body > footer a:focus-visible {
 .about-story,
 .split-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     align-items: center;
 }
@@ -630,7 +624,7 @@ body > footer a:focus-visible {
 .values-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 20px;
 }
 
@@ -727,8 +721,7 @@ body > footer a:focus-visible {
 }
 
 /* 11) Página Moda Circular */
-/* 11.1) Fundo da abertura: coloque a foto em images/hero-modacircular.jpg
-   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+/* 11.1) Fundo da abertura */
 .page-hero--modacircular {
     background-image: linear-gradient(rgba(42, 41, 41, 0.7), rgba(42, 41, 41, 0.7)), url("../images/hero-modacircular.jpg");
 }
@@ -743,9 +736,9 @@ body > footer a:focus-visible {
 .photo-figure img {
     display: block;
     width: 100%;
-    height: 340px;           /* ajuste este número até casar com a altura do texto */
-    object-fit: cover;       /* corta as bordas, sem deformar a foto */
-    object-position: center 65%; /* parte da foto que fica visível (veja abaixo) */
+    height: 340px;         
+    object-fit: cover; /* corta as bordas sem deformar a foto */
+    object-position: center 65%; /* parte da foto que fica visível */
 }
 
 .photo-figure figcaption {
@@ -765,7 +758,7 @@ body > footer a:focus-visible {
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-catalogo.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+    background-attachment: fixed; /* mantém a foto fica parada enquanto a página rola */
 }
 
 #catalogo h2,
@@ -774,7 +767,7 @@ body > footer a:focus-visible {
     color: var(--accent-color2);
 }
 
-/* 11.4) Filtros (funcionam só com CSS, sem JavaScript) */
+/* 11.4) Filtros */
 .filtros {
     margin-bottom: 40px;
     padding: 25px;
@@ -863,7 +856,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 11.5) Cartões das peças */
 .pecas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
     gap: 25px;
 }
 
@@ -937,8 +930,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 }
 
 /* 12) Página Slow Fashion */
-/* 12.1) Fundo da abertura: coloque a foto em images/hero-slowfashion.jpg
-   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+/* 12.1) Fundo da abertura */
 .page-hero--slowfashion {
     background-image: linear-gradient(rgba(42, 41, 41, 0.65), rgba(42, 41, 41, 0.65)), url("../images/hero-slowfashion.jpg");
 }
@@ -949,14 +941,13 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     scroll-margin-top: 160px;
 }
 
-/* 12.2.1) Fundo da seção de produtos: foto em images/fundo-produtos.jpg com camada escura
-   (mesmo padrão do #catalogo da Moda Circular) */
+/* 12.2.1) Fundo da seção de produtos */
 #produtos {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-produtos.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+    background-attachment: fixed;
 }
 
 #produtos h2,
@@ -967,7 +958,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 12.3) Cartões dos criadores */
 .criadores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 25px;
 }
 
@@ -1006,8 +997,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 }
 
 /* 13) Página Materiais */
-/* 13.1) Fundo da abertura: coloque a foto em images/hero-materiais.jpg
-   Enquanto a foto não existir, a abertura aparece em marrom escuro, com o texto claro. */
+/* 13.1) Fundo da abertura */
 .page-hero--materiais {
     background-image: linear-gradient(rgba(42, 41, 41, 0.72), rgba(42, 41, 41, 0.72)), url("../images/hero-materiais.jpg");
 }
@@ -1029,7 +1019,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--primary-dark);
 }
 
-/* 13.4) Tabela comparativa (rolagem lateral no celular, sem quebrar o layout) */
+/* 13.4) Tabela comparativa com rolagem lateral no celular */
 .tabela-rolavel {
     overflow-x: auto;
     background-color: var(--bg-color);
@@ -1153,8 +1143,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     object-fit: contain;
 }
 
-/* 13.8) Fundo da seção de dados: foto em images/fundo-dados.jpg com camada escura.
-   Para a foto aparecer mais, diminua o 0.6; para o texto ficar mais legível, aumente. */
+/* 13.8) Fundo da seção de dados */
 #dados {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-dados.jpg");
@@ -1168,13 +1157,13 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--accent-color2);
 }
 
-/* 13.9) Fundo do catálogo: foto em images/fundo-pecas.jpg, repetida como estampa, com camada escura */
+/* 13.9) Fundo do catálogo */
 #pecas {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.68), rgba(36, 19, 4, 0.68)), url("../images/fundo-pecas.jpg");
     background-size: 700px auto;
     background-repeat: repeat;
-    background-attachment: fixed; /* a foto fica parada enquanto a página rola */
+    background-attachment: fixed;
 }
 
 #pecas h2,
@@ -1184,8 +1173,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 }
 
 /* 14) Página Galeria */
-/* 14.1) Fundo da abertura: coloque a foto em images/hero-galeria.jpg
-   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+/* 14.1) Fundo da abertura */
 .page-hero--galeria {
     background-image: linear-gradient(rgba(42, 41, 41, 0.72), rgba(42, 41, 41, 0.72)), url("../images/hero-galeria.jpg");
 }
@@ -1200,7 +1188,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
 /* 14.3) Grade e cartões da galeria */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
     gap: 25px;
     align-items: start;
 }
@@ -1268,7 +1256,7 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     color: var(--text-color);
 }
 
-/* 14.4) Descrição detalhada (abre e fecha sem JavaScript) */
+/* 14.4) Descrição detalhada com abre e fecha */
 .descricao summary {
     cursor: pointer;
     font-weight: 700;
@@ -1299,23 +1287,21 @@ main:has(#of-troca:checked) .peca:not(.of-troca) {
     font-style: italic;
 }
 
-/* 14.5) Filtro por tema (funciona só com CSS, sem JavaScript) */
+/* 14.5) Filtro por tema */
 main:has(#gal-circular:checked) .colecao:not(.tema-circular),
 main:has(#gal-slow:checked) .colecao:not(.tema-slow),
 main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     display: none;
 }
 
-/* 14b) Página Notícias */
-/* Fundo da abertura: coloque a foto em images/hero-noticias.jpg
-   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+/* 15) Página Notícias */
+/* Fundo da abertura */
 .page-hero--noticias {
     background-image: linear-gradient(rgba(36, 19, 4, 0.65), rgba(36, 19, 4, 0.65)), url("../images/hero-noticias.jpg");
     background-position: center 40%;
 }
 
-/* Fundo de "Mais Notícias": foto em images/fundo-noticias.jpg com camada escura,
-   parada atrás do conteúdo enquanto a página rola. */
+/* Fundo de "Mais Notícias" */
 #recentes {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/fundo-noticias.jpg");
@@ -1338,7 +1324,7 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
 
 .noticias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 24px;
     margin-top: 24px;
 }
@@ -1404,9 +1390,8 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     white-space: nowrap;
 }
 
-/* 14c) Página Mídia */
-/* Fundo da abertura: coloque a foto em images/hero-midia.jpg
-   (enquanto o arquivo não existir, a abertura aparece em marrom escuro) */
+/* 16) Página Mídia */
+/* Fundo da abertura */
 .page-hero--midia {
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-midia.jpg");
 }
@@ -1485,7 +1470,7 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     margin: 16px auto 0 auto;
 }
 
-/* 14d) Página Orçamento */
+/* 17) Página Orçamento */
 .page-hero--orcamento {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-orcamento.jpg");
@@ -1513,7 +1498,7 @@ main:has(#gal-materiais:checked) .colecao:not(.tema-materiais) {
     overflow-wrap: anywhere;
 }
 
-/* 14e) Página Contato */
+/* 18) Página Contato */
 .page-hero--contato {
     background-color: #241304;
     background-image: linear-gradient(rgba(36, 19, 4, 0.6), rgba(36, 19, 4, 0.6)), url("../images/hero-contato.jpg");
@@ -1732,7 +1717,18 @@ button.btn {
     margin-top: 30px;
 }
 
-/* 15) Responsividade das páginas internas (único @media de celular do arquivo) */
+/* Para quebrar textos longos em vez de estourar a largura da tela */
+main h1,
+main h2,
+main h3,
+main p,
+main li,
+main figcaption,
+main a {
+    overflow-wrap: anywhere;
+}
+
+/* 19) Responsividade das páginas internas */
 @media (max-width: 768px) {
     /* Cabeçalho compacto: no celular ele rola junto com a página e ocupa menos espaço */
     body > header {
@@ -1755,7 +1751,7 @@ button.btn {
 
     #main-nav a {
         display: inline-block;
-        font-size: 0.72rem;
+        font-size: 0.8rem;
         letter-spacing: 0.5px;
         padding: 6px 0 2px 0;
     }
