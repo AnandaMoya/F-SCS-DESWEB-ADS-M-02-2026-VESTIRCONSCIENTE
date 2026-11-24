@@ -35,6 +35,67 @@ Sustentabilidade e impacto social, com foco em moda. O site mostra os impactos d
 | 9 | `orcamento_hospedagem.html` | Comparativo de 3 hospedagens e 3 domínios, com a escolha justificada |
 | 10 | `contato.html` | Formulário validado, dados de contato, autoria, acessibilidade e privacidade |
 
+## Correspondência com os nomes do enunciado
+
+O enunciado da A06 sugere os nomes `projetos`, `impacto` e `acessibilidade`. O conteúdo foi organizado em páginas com nomes mais específicos ao tema. A tabela mostra onde cada item sugerido está no site.
+
+| Nome sugerido no enunciado | Onde está no site |
+|---|---|
+| `index` | `index.html` |
+| `sobre` | `sobre.html` |
+| `projetos` | `modacircular.html` e `slowfashion.html` (as alternativas apresentadas pelo projeto) |
+| `impacto` | `materiais.html` (dados com fonte e materiais de menor impacto) e `noticias.html` |
+| `acessibilidade` | `contato.html#acessibilidade` (suporte PCD) e `sobre.html` (compromisso de inclusão); a acessibilidade também está em todas as páginas |
+| `galeria` | `galeria.html` |
+| `midia` | `midia.html` |
+| `noticias` | `noticias.html` |
+| `contato` | `contato.html` |
+| `orcamento_hospedagem` | `orcamento_hospedagem.html` |
+
+Pastas: `img/` do enunciado corresponde a `images/`; `assets/` corresponde a `media/` (vídeo e legendas); não há pasta `js/`, porque o projeto não usa JavaScript.
+
+## Estrutura de pastas
+
+/
+├── index.html
+├── sobre.html
+├── modacircular.html
+├── slowfashion.html
+├── materiais.html
+├── galeria.html
+├── noticias.html
+├── midia.html
+├── orcamento_hospedagem.html
+├── contato.html
+├── favicon.ico
+├── css/
+│   └── style.css          
+├── images/                
+├── media/
+│   ├── costura.mp4        
+│   └── costura.pt-BR.vtt  
+└── docs/                 
+
+## Documentação (pasta `docs/`)
+
+| Arquivo | Conteúdo |
+|---|---|
+| `README.md` | Este arquivo: visão geral, páginas, estrutura e tecnologias |
+| `Escopo do Projeto.docx` | Escopo do site |
+| `orcamento-hospedagem.docx` | Comparativo de hospedagens e domínios, com cálculos e a escolha justificada |
+| `Evidencias de Testes.docx` | Resultados e prints do W3C, axe DevTools, Lighthouse, teclado e responsividade |
+| `Relatório de Melhorias.docx` | Do MVP ao site final: o que mudou e por quê |
+
+## Tecnologias
+
+- **HTML5 semântico** (`header`, `nav`, `main`, `section`, `article`, `figure`, `details`, `footer`), com atalho para o conteúdo principal e `aria-current` no menu.
+- **CSS3** em um único arquivo: variáveis, Flexbox, Grid, `@media` (um ponto de quebra em 768/769 px), `:has()` nos filtros, `:target` na confirmação do formulário e `:user-invalid` na validação.
+- **Sem JavaScript**: filtros, confirmação do formulário e blocos de descrição funcionam só com HTML e CSS.
+- **Mídia:** vídeo HTML5 com legendas (`<track>`), player do YouTube incorporado (youtube-nocookie), áudio HTML5 e mapa do OpenStreetMap em `iframe`.
+- **Fontes:** Montserrat e Playfair Display (Google Fonts).
+- **Hospedagem:** Railway, com HTTPS e endereço `vestirconsciente.up.railway.app`.
+- **Testes:** W3C Nu HTML Checker, W3C CSS Validator, Lighthouse, axe DevTools, teclado e testes em celular.
+
 ## Divisão de funções
 
 O trabalho é individual. Todas as funções foram da autora: planejamento e escopo, pesquisa de conteúdo, design e identidade visual, HTML, CSS, testes de acessibilidade e responsividade, publicação e documentação.
