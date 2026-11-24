@@ -85,6 +85,7 @@ Pastas: `img/` do enunciado corresponde a `images/`; `assets/` corresponde a `me
 | `orcamento-hospedagem.docx` | Comparativo de hospedagens e domínios, com cálculos e a escolha justificada |
 | `Evidencias de Testes.docx` | Resultados e prints do W3C, axe DevTools, Lighthouse, teclado e responsividade |
 | `Relatório de Melhorias.docx` | Do MVP ao site final: o que mudou e por quê |
+| `Diário de Bordo.docx` | Ações, decisões, dificuldades e soluções datadas |
 
 ## Tecnologias
 
