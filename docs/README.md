@@ -52,7 +52,7 @@ O enunciado da A06 sugere os nomes `projetos`, `impacto` e `acessibilidade`. O c
 | `contato` | `contato.html` |
 | `orcamento_hospedagem` | `orcamento_hospedagem.html` |
 
-Pastas: `img/` do enunciado corresponde a `images/`; `assets/` corresponde a `media/` (vídeo e legendas); não há pasta `js/`, porque o projeto não usa JavaScript.
+Pastas: `img/` do enunciado corresponde a `images/`; `assets/` corresponde a `media/` (vídeo, áudio e legendas); não há pasta `js/`, porque o projeto não usa JavaScript.
 
 ## Estrutura de pastas
 
@@ -73,7 +73,8 @@ Pastas: `img/` do enunciado corresponde a `images/`; `assets/` corresponde a `me
 ├── images/                
 ├── media/
 │   ├── costura.mp4        
-│   └── costura.pt-BR.vtt  
+│   ├── costura.pt-BR.vtt  
+│   └── podcast-weena-tikuna.mp3
 └── docs/                 
 
 ## Documentação (pasta `docs/`)
